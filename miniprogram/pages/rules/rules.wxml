@@ -1,0 +1,87 @@
+<view class="page-shell rules-page">
+  <view class="rules-hero">
+    <text class="eyebrow">QUICK RULES</text>
+    <view class="display-title rules-title">一分钟开局</view>
+    <view class="rules-lead">善良隐藏梅林并完成任务；邪恶混入队伍，破坏任务或找出梅林。</view>
+  </view>
+
+  <view class="camp-grid">
+    <view class="camp-card good-card">
+      <view class="camp-kicker">善良阵营</view>
+      <view class="camp-goal">赢下 3 次任务</view>
+      <view class="camp-detail">并让梅林躲过刺客的最后指认</view>
+    </view>
+    <view class="camp-card evil-card">
+      <view class="camp-kicker">邪恶阵营</view>
+      <view class="camp-goal">破坏 3 次任务</view>
+      <view class="camp-detail">或连续否决 5 支队伍，或最后刺中梅林</view>
+    </view>
+  </view>
+
+  <view class="team-table card">
+    <view class="team-table-head">
+      <view>人数</view>
+      <view class="round-sizes">
+        <text>1</text><text>2</text><text>3</text><text>4</text><text>5</text>
+      </view>
+    </view>
+    <view class="team-table-row">
+      <view class="player-count">5 人</view>
+      <view class="round-sizes"><text>2</text><text>3</text><text>2</text><text>3</text><text>3</text></view>
+    </view>
+    <view class="team-table-row">
+      <view class="player-count">6 人</view>
+      <view class="round-sizes"><text>2</text><text>3</text><text>4</text><text>3</text><text>4</text></view>
+    </view>
+    <view class="team-table-row threshold-row">
+      <view class="player-count">7 人</view>
+      <view class="round-sizes"><text>2</text><text>3</text><text>3</text><text class="double-fail">4<text class="star">*</text></text><text>4</text></view>
+    </view>
+    <view class="team-table-row threshold-row">
+      <view class="player-count">8–10 人</view>
+      <view class="round-sizes"><text>3</text><text>4</text><text>4</text><text class="double-fail">5<text class="star">*</text></text><text>5</text></view>
+    </view>
+    <view class="table-note"><text class="star">*</text> 7 人及以上，第 4 轮需至少 2 张失败票</view>
+  </view>
+
+  <view class="rule-list card">
+    <view class="rule-item">
+      <view class="rule-number">1</view>
+      <view class="rule-copy">
+        <view class="rule-title">领队组队</view>
+        <view class="rule-detail">当前领队按本轮人数提名任务队伍。队伍被否决时立即传位；队伍通过时，完成任务后再顺时针传位。</view>
+      </view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-number">2</view>
+      <view class="rule-copy">
+        <view class="rule-title">全员表决</view>
+        <view class="rule-detail">所有玩家对队伍投赞成或反对。赞成票必须严格过半；平票也是否决。</view>
+      </view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-number">3</view>
+      <view class="rule-copy">
+        <view class="rule-title">秘密任务票</view>
+        <view class="rule-detail">只有入队成员投任务票。善良玩家只能投成功；邪恶玩家可选成功或失败。系统只公开总数。</view>
+      </view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-number">4</view>
+      <view class="rule-copy">
+        <view class="rule-title">特殊失败阈值</view>
+        <view class="rule-detail">7 人及以上时，第 4 轮需要至少 2 张失败票才会失败；其余轮次 1 张即失败。</view>
+      </view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-number">5</view>
+      <view class="rule-copy">
+        <view class="rule-title">胜负与刺杀</view>
+        <view class="rule-detail">三次任务失败，或同一任务连续 5 次组队被否决，邪恶直接获胜。三次任务成功后，刺客命中梅林仍可翻盘。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="rules-footnote">队伍票在全员提交后公开到个人；任务票永久只公开汇总，不应归因到某位玩家。</view>
+  <view class="safe-bottom"></view>
+</view>

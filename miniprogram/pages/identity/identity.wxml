@@ -1,0 +1,77 @@
+<view class="page-shell identity-page">
+  <view class="identity-header">
+    <text class="eyebrow">PRIVATE IDENTITY</text>
+    <view class="identity-title">确认你的身份</view>
+    <view class="identity-warning">确保只有你能看到屏幕</view>
+  </view>
+
+  <view wx:if="{{error}}" class="error-banner">{{error}}</view>
+
+  <view wx:if="{{loading}}" class="secret-card card loading-card">
+    <view class="seal small-seal">◇</view>
+    <view class="loading-title">正在发放身份…</view>
+  </view>
+
+  <view
+    wx:else
+    class="secret-card card {{campClass}} {{revealed ? 'is-revealed' : ''}}"
+    bindtouchstart="revealSecret"
+    bindtouchend="maskSecret"
+    bindtouchcancel="maskSecret"
+  >
+    <block wx:if="{{revealed && visibleRole}}">
+      <view class="camp-label">{{visibleRole.camp === 'evil' ? '邪恶阵营' : '善良阵营'}}</view>
+      <view class="role-name">{{visibleRole.label}}</view>
+      <view class="role-description">{{visibleRole.description}}</view>
+
+      <view class="role-guide">
+        <view class="guide-row">
+          <text class="guide-label">你的目标</text>
+          <text class="guide-copy">{{visibleRole.goal}}</text>
+        </view>
+        <view class="guide-row">
+          <text class="guide-label">你能看到谁</text>
+          <text class="guide-copy">{{visibleRole.vision}}</text>
+        </view>
+        <view class="guide-row tip-row">
+          <text class="guide-label">实战提醒</text>
+          <text class="guide-copy">{{visibleRole.tip}}</text>
+        </view>
+      </view>
+
+      <view class="knowledge-panel">
+        <view class="knowledge-title">{{visibleKnowledge.title}}</view>
+        <view class="knowledge-description">{{visibleKnowledge.description}}</view>
+        <view wx:if="{{visibleKnowledge.players.length}}" class="knowledge-players">
+          <view wx:for="{{visibleKnowledge.players}}" wx:key="id" class="knowledge-player">
+            <text class="knowledge-seat">{{item.seat + 1}}</text>
+            <text>{{item.nickname}}</text>
+          </view>
+        </view>
+        <view wx:else class="no-intel">没有可显示的玩家</view>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="seal">◇</view>
+      <view class="hold-title">按住查看身份</view>
+      <view class="hold-hint">松手后立即遮罩</view>
+      <view class="hold-line"><view class="hold-line-fill"></view></view>
+    </block>
+  </view>
+
+  <button wx:if="{{error && !loading}}" class="secondary-button retry-button" bindtap="retry">重新获取</button>
+
+  <view class="identity-actions">
+    <button
+      class="primary-button"
+      loading="{{acknowledging}}"
+      disabled="{{!viewedOnce || acknowledged || acknowledging}}"
+      bindtap="acknowledgeRole"
+    >
+      {{acknowledged ? '已确认身份' : (viewedOnce ? '我已记住，确认身份' : '请先按住查看')}}
+    </button>
+    <view class="privacy-copy">身份与情报不会写入本地存储；切到后台时会立即清除。</view>
+  </view>
+  <view class="safe-bottom"></view>
+</view>

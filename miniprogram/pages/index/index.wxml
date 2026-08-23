@@ -1,0 +1,91 @@
+<view class="page-shell landing-page">
+  <view class="hero">
+    <text class="eyebrow">THE RESISTANCE</text>
+    <view class="display-title">阿瓦隆</view>
+    <view class="hero-subtitle">每人一部手机，完成发牌、投票与复盘</view>
+  </view>
+
+  <view wx:if="{{error}}" class="error-banner">{{error}}</view>
+
+  <view wx:if="{{lastRoomCode}}" class="return-card card" bindtap="returnToRoom">
+    <view>
+      <view class="return-kicker">上次的圆桌</view>
+      <view class="return-code">{{lastRoomCode}}</view>
+    </view>
+    <view class="return-action">返回房间 <text>→</text></view>
+  </view>
+
+  <view class="setup-card card">
+    <view class="section-title">你的名字</view>
+    <view class="field-block">
+      <input
+        class="field-control"
+        maxlength="10"
+        placeholder="例如：圆桌一号"
+        placeholder-class="input-placeholder"
+        value="{{nickname}}"
+        bindinput="onNicknameInput"
+      />
+    </view>
+
+    <view class="section-divider"></view>
+
+    <view class="section-heading">
+      <view class="section-title">创建房间</view>
+      <view class="section-caption">你将成为房主</view>
+    </view>
+
+    <view class="dual-fields">
+      <view class="compact-field">
+        <text class="field-label">玩家人数</text>
+        <picker range="{{playerCounts}}" value="{{playerCountIndex}}" bindchange="onPlayerCountChange">
+          <view class="field-control picker-control">
+            <text>{{playerCounts[playerCountIndex]}} 人</text>
+            <text class="picker-arrow">⌄</text>
+          </view>
+        </picker>
+      </view>
+      <view class="compact-field">
+        <text class="field-label">角色模式</text>
+        <picker range="{{modes}}" range-key="label" value="{{modeIndex}}" bindchange="onModeChange">
+          <view class="field-control picker-control">
+            <text>{{modes[modeIndex].label}}</text>
+            <text class="picker-arrow">⌄</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="mode-hint">{{modes[modeIndex].hint}}</view>
+
+    <button class="primary-button create-button" loading="{{creating}}" disabled="{{creating || joining}}" bindtap="createRoom">
+      建立圆桌
+    </button>
+
+    <view class="or-row">
+      <view class="or-line"></view>
+      <text>或加入现有房间</text>
+      <view class="or-line"></view>
+    </view>
+
+    <view class="join-row">
+      <input
+        class="field-control code-input"
+        maxlength="6"
+        placeholder="6 位房间码"
+        placeholder-class="input-placeholder"
+        value="{{joinCode}}"
+        bindinput="onJoinCodeInput"
+      />
+      <button class="secondary-button join-button" loading="{{joining}}" disabled="{{creating || joining}}" bindtap="joinRoom">
+        加入
+      </button>
+    </view>
+  </view>
+
+  <view class="privacy-note">
+    <text class="privacy-icon">◈</text>
+    身份只在按住卡片时显示，不会保存到本地
+  </view>
+  <button class="rules-link" bindtap="openRules">规则速览 · 开局前 1 分钟读完 →</button>
+  <view class="safe-bottom"></view>
+</view>

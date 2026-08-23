@@ -1,0 +1,188 @@
+.rules-page {
+  padding-top: 54rpx;
+}
+
+.rules-title {
+  font-size: 48rpx;
+}
+
+.rules-lead {
+  margin-top: 22rpx;
+  color: #aab0ba;
+  font-size: 27rpx;
+  line-height: 1.7;
+}
+
+.camp-grid {
+  display: flex;
+  gap: 18rpx;
+  margin-top: 36rpx;
+}
+
+.camp-card {
+  flex: 1;
+  min-height: 226rpx;
+  padding: 26rpx 24rpx;
+  border: 1rpx solid;
+  border-radius: 24rpx;
+}
+
+.good-card {
+  border-color: rgba(97, 156, 199, 0.45);
+  background: rgba(46, 96, 132, 0.22);
+}
+
+.evil-card {
+  border-color: rgba(190, 74, 70, 0.45);
+  background: rgba(116, 38, 40, 0.22);
+}
+
+.camp-kicker {
+  color: #9caabd;
+  font-size: 21rpx;
+  font-weight: 700;
+  letter-spacing: 3rpx;
+}
+
+.camp-goal {
+  margin-top: 18rpx;
+  color: #fff4df;
+  font-size: 31rpx;
+  font-weight: 700;
+}
+
+.camp-detail {
+  margin-top: 12rpx;
+  color: #9ca3ae;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+
+.team-table {
+  margin-top: 26rpx;
+  padding: 20rpx 24rpx;
+}
+
+.team-table-head,
+.team-table-row,
+.round-sizes {
+  display: flex;
+  align-items: center;
+}
+
+.team-table-head,
+.team-table-row {
+  min-height: 62rpx;
+  border-bottom: 1rpx solid #303744;
+}
+
+.team-table-head {
+  color: #737c89;
+  font-size: 19rpx;
+}
+
+.team-table-row:last-of-type {
+  border-bottom: 0;
+}
+
+.player-count,
+.team-table-head > view:first-child {
+  width: 130rpx;
+  flex: 0 0 130rpx;
+}
+
+.player-count {
+  color: #d9c7aa;
+  font-size: 23rpx;
+  font-weight: 600;
+}
+
+.round-sizes {
+  flex: 1;
+  justify-content: space-between;
+}
+
+.round-sizes > text {
+  display: inline-flex;
+  width: 48rpx;
+  height: 42rpx;
+  align-items: center;
+  justify-content: center;
+  color: #a6aeba;
+  font-size: 22rpx;
+  text-align: center;
+}
+
+.round-sizes .double-fail {
+  border-radius: 10rpx;
+  background: rgba(174, 74, 69, 0.2);
+  color: #e19a93;
+}
+
+.star {
+  color: #e27d76;
+  font-size: 16rpx;
+}
+
+.table-note {
+  margin-top: 16rpx;
+  color: #7f8895;
+  font-size: 20rpx;
+  line-height: 1.5;
+}
+
+.rule-list {
+  margin-top: 28rpx;
+  padding: 8rpx 28rpx;
+}
+
+.rule-item {
+  display: flex;
+  gap: 22rpx;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #303744;
+}
+
+.rule-item:last-child {
+  border-bottom: 0;
+}
+
+.rule-number {
+  display: flex;
+  width: 52rpx;
+  height: 52rpx;
+  flex: 0 0 52rpx;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid rgba(215, 180, 106, 0.5);
+  border-radius: 50%;
+  color: #d8b56b;
+  font-family: Georgia, serif;
+  font-size: 27rpx;
+}
+
+.rule-copy {
+  flex: 1;
+}
+
+.rule-title {
+  color: #f6ead6;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.rule-detail {
+  margin-top: 10rpx;
+  color: #929aa6;
+  font-size: 24rpx;
+  line-height: 1.65;
+}
+
+.rules-footnote {
+  margin: 28rpx 16rpx 0;
+  padding: 22rpx 24rpx;
+  border-left: 4rpx solid #a8894d;
+  color: #838b98;
+  font-size: 22rpx;
+  line-height: 1.6;
+}

@@ -1,0 +1,152 @@
+page {
+  min-height: 100%;
+  background: #0b0e14;
+  color: #f4ead7;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 28rpx;
+}
+
+view,
+text,
+button,
+input,
+picker {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  border-radius: 18rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+button::after {
+  border: 0;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 32rpx 28rpx 64rpx;
+  background:
+    radial-gradient(circle at 90% 2%, rgba(190, 145, 66, 0.15), transparent 32%),
+    linear-gradient(180deg, #121722 0%, #0b0e14 48%, #090b10 100%);
+}
+
+.eyebrow {
+  color: #c8a45e;
+  font-size: 22rpx;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+  text-transform: uppercase;
+}
+
+.display-title {
+  margin-top: 12rpx;
+  color: #fff8e9;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 58rpx;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 2rpx;
+}
+
+.muted {
+  color: #979eaa;
+}
+
+.gold {
+  color: #d7b46a;
+}
+
+.card {
+  border: 1rpx solid rgba(215, 180, 106, 0.22);
+  border-radius: 28rpx;
+  background: rgba(25, 31, 43, 0.94);
+  box-shadow: 0 18rpx 50rpx rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  color: #f4ead7;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 14rpx;
+  color: #c1c6cf;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.field-control {
+  width: 100%;
+  min-height: 92rpx;
+  padding: 0 26rpx;
+  border: 1rpx solid #343b49;
+  border-radius: 18rpx;
+  background: #111620;
+  color: #fff8e9;
+  line-height: 92rpx;
+}
+
+.primary-button {
+  min-height: 92rpx;
+  padding: 0 28rpx;
+  background: linear-gradient(135deg, #e2c27e 0%, #bd8e3e 100%);
+  color: #17130d;
+  line-height: 92rpx;
+}
+
+.secondary-button {
+  min-height: 88rpx;
+  padding: 0 26rpx;
+  border: 1rpx solid #485164;
+  background: #181e29;
+  color: #f1e6d3;
+  line-height: 88rpx;
+}
+
+.danger-button {
+  min-height: 88rpx;
+  border: 1rpx solid rgba(206, 86, 82, 0.6);
+  background: rgba(115, 39, 41, 0.3);
+  color: #ffb2ad;
+  line-height: 88rpx;
+}
+
+.ghost-button {
+  min-height: 76rpx;
+  padding: 0 24rpx;
+  border: 1rpx solid #394150;
+  background: transparent;
+  color: #c7cbd2;
+  font-size: 26rpx;
+  line-height: 76rpx;
+}
+
+button[disabled] {
+  opacity: 0.42;
+}
+
+.error-banner {
+  margin-bottom: 22rpx;
+  padding: 20rpx 24rpx;
+  border: 1rpx solid rgba(224, 98, 92, 0.42);
+  border-radius: 18rpx;
+  background: rgba(128, 40, 40, 0.24);
+  color: #ffc0bb;
+  font-size: 25rpx;
+  line-height: 1.5;
+}
+
+.empty-state {
+  padding: 46rpx 24rpx;
+  color: #858d9a;
+  text-align: center;
+}
+
+.safe-bottom {
+  height: env(safe-area-inset-bottom);
+}

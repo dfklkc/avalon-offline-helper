@@ -1,0 +1,263 @@
+.identity-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 54rpx;
+}
+
+.identity-header {
+  text-align: center;
+}
+
+.identity-title {
+  margin-top: 14rpx;
+  color: #fff8e9;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 45rpx;
+  font-weight: 700;
+}
+
+.identity-warning {
+  margin-top: 14rpx;
+  color: #8e96a3;
+  font-size: 24rpx;
+}
+
+.secret-card {
+  display: flex;
+  min-height: 760rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48rpx;
+  padding: 54rpx 40rpx;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  user-select: none;
+}
+
+.secret-card::before {
+  width: 440rpx;
+  height: 440rpx;
+  border: 2rpx solid rgba(215, 180, 106, 0.08);
+  border-radius: 50%;
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.secret-card.is-revealed {
+  justify-content: flex-start;
+  background: linear-gradient(155deg, #1e2834 0%, #141923 54%, #11151d 100%);
+}
+
+.secret-card.camp-good {
+  border-color: rgba(104, 167, 212, 0.58);
+  box-shadow: 0 20rpx 64rpx rgba(37, 102, 151, 0.18);
+}
+
+.secret-card.camp-evil {
+  border-color: rgba(205, 82, 75, 0.58);
+  box-shadow: 0 20rpx 64rpx rgba(145, 42, 42, 0.2);
+}
+
+.seal {
+  display: flex;
+  width: 180rpx;
+  height: 180rpx;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid rgba(215, 180, 106, 0.55);
+  border-radius: 50%;
+  color: #d9b66d;
+  font-size: 90rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.small-seal {
+  width: 110rpx;
+  height: 110rpx;
+  font-size: 54rpx;
+}
+
+.hold-title,
+.loading-title {
+  margin-top: 44rpx;
+  color: #f7ecd8;
+  font-size: 36rpx;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.hold-hint {
+  margin-top: 14rpx;
+  color: #818997;
+  position: relative;
+  z-index: 1;
+}
+
+.hold-line {
+  width: 230rpx;
+  height: 5rpx;
+  margin-top: 42rpx;
+  border-radius: 999rpx;
+  background: #313846;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.hold-line-fill {
+  width: 45%;
+  height: 100%;
+  border-radius: 999rpx;
+  background: #c8a45e;
+}
+
+.camp-label {
+  color: #aeb8c5;
+  font-size: 22rpx;
+  font-weight: 800;
+  letter-spacing: 7rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.camp-evil .camp-label {
+  color: #e6948f;
+}
+
+.role-name {
+  margin-top: 24rpx;
+  color: #fff8e9;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 76rpx;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.role-description {
+  max-width: 520rpx;
+  margin-top: 24rpx;
+  color: #aab1bc;
+  font-size: 26rpx;
+  line-height: 1.65;
+  position: relative;
+  z-index: 1;
+}
+
+.role-guide {
+  width: 100%;
+  margin-top: 30rpx;
+  padding: 4rpx 26rpx;
+  border: 1rpx solid rgba(125, 142, 163, 0.2);
+  border-radius: 20rpx;
+  background: rgba(7, 10, 15, 0.28);
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+.guide-row {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid rgba(125, 142, 163, 0.16);
+}
+
+.guide-row:last-child {
+  border-bottom: 0;
+}
+
+.guide-label,
+.guide-copy {
+  display: block;
+}
+
+.guide-label {
+  color: #d8b872;
+  font-size: 21rpx;
+  font-weight: 700;
+}
+
+.guide-copy {
+  margin-top: 7rpx;
+  color: #9ba4b0;
+  font-size: 22rpx;
+  line-height: 1.55;
+}
+
+.tip-row .guide-label {
+  color: #b5bdc9;
+}
+
+.knowledge-panel {
+  width: 100%;
+  margin-top: 48rpx;
+  padding: 28rpx;
+  border: 1rpx solid rgba(215, 180, 106, 0.18);
+  border-radius: 22rpx;
+  background: rgba(7, 10, 15, 0.38);
+  position: relative;
+  text-align: left;
+  z-index: 1;
+}
+
+.knowledge-title {
+  color: #e3c27e;
+  font-size: 27rpx;
+  font-weight: 700;
+}
+
+.knowledge-description,
+.no-intel {
+  margin-top: 10rpx;
+  color: #858e9c;
+  font-size: 23rpx;
+  line-height: 1.55;
+}
+
+.knowledge-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 22rpx;
+}
+
+.knowledge-player {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  padding: 12rpx 18rpx;
+  border-radius: 999rpx;
+  background: #252d3a;
+  color: #eef0f2;
+  font-size: 24rpx;
+}
+
+.knowledge-seat {
+  color: #d5b269;
+  font-size: 21rpx;
+}
+
+.identity-actions {
+  margin-top: auto;
+  padding-top: 34rpx;
+}
+
+.privacy-copy {
+  margin: 24rpx 28rpx 0;
+  color: #68717e;
+  font-size: 21rpx;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.retry-button {
+  margin-top: 24rpx;
+}

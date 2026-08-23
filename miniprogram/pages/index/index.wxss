@@ -1,0 +1,158 @@
+.landing-page {
+  padding-top: 76rpx;
+}
+
+.hero {
+  margin-bottom: 54rpx;
+}
+
+.hero-subtitle {
+  margin-top: 20rpx;
+  color: #9da4af;
+  font-size: 27rpx;
+  letter-spacing: 1rpx;
+}
+
+.return-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+  padding: 24rpx 28rpx;
+  background: linear-gradient(120deg, rgba(120, 85, 37, 0.35), rgba(28, 34, 46, 0.96));
+}
+
+.return-kicker {
+  color: #aba28f;
+  font-size: 22rpx;
+}
+
+.return-code {
+  margin-top: 4rpx;
+  color: #f0ce87;
+  font-size: 34rpx;
+  font-weight: 800;
+  letter-spacing: 7rpx;
+}
+
+.return-action {
+  color: #f0dcc0;
+  font-size: 25rpx;
+  font-weight: 600;
+}
+
+.setup-card {
+  padding: 34rpx 30rpx 38rpx;
+}
+
+.field-block {
+  margin-top: 20rpx;
+}
+
+.input-placeholder {
+  color: #626b79;
+}
+
+.section-divider {
+  height: 1rpx;
+  margin: 34rpx 0;
+  background: #313846;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.section-caption {
+  color: #777f8c;
+  font-size: 22rpx;
+}
+
+.dual-fields {
+  display: flex;
+  gap: 18rpx;
+}
+
+.compact-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.picker-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 27rpx;
+}
+
+.picker-arrow {
+  color: #8b93a0;
+}
+
+.mode-hint {
+  margin-top: 16rpx;
+  color: #7f8794;
+  font-size: 23rpx;
+}
+
+.create-button {
+  margin-top: 32rpx;
+}
+
+.or-row {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  margin: 34rpx 0;
+  color: #69717f;
+  font-size: 22rpx;
+}
+
+.or-line {
+  flex: 1;
+  height: 1rpx;
+  background: #303744;
+}
+
+.join-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.code-input {
+  flex: 1;
+  min-width: 0;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+}
+
+.join-button {
+  width: 176rpx;
+}
+
+.privacy-note {
+  margin: 30rpx 20rpx 0;
+  color: #727a87;
+  font-size: 22rpx;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.privacy-icon {
+  margin-right: 8rpx;
+  color: #a98a50;
+}
+
+.rules-link {
+  min-height: 64rpx;
+  margin: 18rpx auto 0;
+  padding: 0 22rpx;
+  background: transparent;
+  color: #b89a61;
+  font-size: 23rpx;
+  font-weight: 500;
+  line-height: 64rpx;
+}
