@@ -2,7 +2,7 @@
   <view class="identity-header">
     <text class="eyebrow">PRIVATE IDENTITY</text>
     <view class="identity-title">确认你的身份</view>
-    <view class="identity-warning">确保只有你能看到屏幕</view>
+    <view class="identity-warning"><view class="privacy-dot"></view><text>确保只有你能看到屏幕</text></view>
   </view>
 
   <view wx:if="{{error}}" class="error-banner">{{error}}</view>
@@ -64,7 +64,7 @@
 
   <view class="identity-actions">
     <button
-      class="primary-button"
+      class="primary-button confirm-button"
       loading="{{acknowledging}}"
       disabled="{{!viewedOnce || acknowledged || acknowledging}}"
       bindtap="acknowledgeRole"

@@ -7,18 +7,22 @@
 
   <view class="camp-grid">
     <view class="camp-card good-card">
-      <view class="camp-kicker">善良阵营</view>
+      <view class="camp-card-top"><view class="camp-icon">○</view><view class="camp-kicker">善良阵营</view></view>
       <view class="camp-goal">赢下 3 次任务</view>
       <view class="camp-detail">并让梅林躲过刺客的最后指认</view>
     </view>
     <view class="camp-card evil-card">
-      <view class="camp-kicker">邪恶阵营</view>
+      <view class="camp-card-top"><view class="camp-icon">×</view><view class="camp-kicker">邪恶阵营</view></view>
       <view class="camp-goal">破坏 3 次任务</view>
       <view class="camp-detail">或连续否决 5 支队伍，或最后刺中梅林</view>
     </view>
   </view>
 
   <view class="team-table card">
+    <view class="table-title-row">
+      <view class="table-title">任务队伍人数</view>
+      <view class="table-caption">5 轮任务</view>
+    </view>
     <view class="team-table-head">
       <view>人数</view>
       <view class="round-sizes">
@@ -45,6 +49,7 @@
   </view>
 
   <view class="rule-list card">
+    <view class="rule-list-header"><text>流程规则</text><text>5 STEPS</text></view>
     <view class="rule-item">
       <view class="rule-number">1</view>
       <view class="rule-copy">
@@ -82,6 +87,6 @@
     </view>
   </view>
 
-  <view class="rules-footnote">队伍票在全员提交后公开到个人；任务票永久只公开汇总，不应归因到某位玩家。</view>
+  <view class="rules-footnote"><text class="footnote-icon">◈</text><text>队伍票在全员提交后公开到个人；任务票永久只公开汇总，不应归因到某位玩家。</text></view>
   <view class="safe-bottom"></view>
 </view>

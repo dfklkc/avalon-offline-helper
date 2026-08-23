@@ -1,22 +1,32 @@
 <view class="page-shell landing-page">
   <view class="hero">
+    <view class="hero-mark">
+      <view class="hero-mark-ring"><text>◇</text></view>
+    </view>
     <text class="eyebrow">THE RESISTANCE</text>
     <view class="display-title">阿瓦隆</view>
     <view class="hero-subtitle">每人一部手机，完成发牌、投票与复盘</view>
+    <view class="hero-divider"><view></view><text>OFFLINE COMPANION</text><view></view></view>
   </view>
 
   <view wx:if="{{error}}" class="error-banner">{{error}}</view>
 
-  <view wx:if="{{lastRoomCode}}" class="return-card card" bindtap="returnToRoom">
+  <view wx:if="{{lastRoomCode}}" class="return-card card" hover-class="return-card-hover" bindtap="returnToRoom">
     <view>
       <view class="return-kicker">上次的圆桌</view>
       <view class="return-code">{{lastRoomCode}}</view>
     </view>
-    <view class="return-action">返回房间 <text>→</text></view>
+    <view class="return-action"><text>返回房间</text><text class="return-arrow">→</text></view>
   </view>
 
   <view class="setup-card card">
-    <view class="section-title">你的名字</view>
+    <view class="section-heading compact-heading">
+      <view>
+        <text class="section-index">01</text>
+        <text class="section-title inline-title">你的名字</text>
+      </view>
+      <text class="section-caption">仅用于本局展示</text>
+    </view>
     <view class="field-block">
       <input
         class="field-control"
@@ -31,7 +41,10 @@
     <view class="section-divider"></view>
 
     <view class="section-heading">
-      <view class="section-title">创建房间</view>
+      <view>
+        <text class="section-index">02</text>
+        <text class="section-title inline-title">创建房间</text>
+      </view>
       <view class="section-caption">你将成为房主</view>
     </view>
 

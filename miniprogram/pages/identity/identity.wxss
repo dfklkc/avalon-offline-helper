@@ -2,7 +2,7 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  padding-top: 54rpx;
+  padding-top: 42rpx;
 }
 
 .identity-header {
@@ -13,14 +13,30 @@
   margin-top: 14rpx;
   color: #fff8e9;
   font-family: Georgia, "Songti SC", serif;
-  font-size: 45rpx;
+  font-size: 46rpx;
   font-weight: 700;
 }
 
 .identity-warning {
-  margin-top: 14rpx;
-  color: #8e96a3;
-  font-size: 24rpx;
+  display: inline-flex;
+  min-height: 48rpx;
+  align-items: center;
+  gap: 10rpx;
+  margin-top: 18rpx;
+  padding: 0 16rpx;
+  border: 1rpx solid rgba(109, 125, 144, 0.2);
+  border-radius: 999rpx;
+  background: rgba(15, 20, 29, 0.52);
+  color: #929aa7;
+  font-size: 21rpx;
+}
+
+.privacy-dot {
+  width: 9rpx;
+  height: 9rpx;
+  border-radius: 50%;
+  background: #70ad88;
+  box-shadow: 0 0 12rpx rgba(112, 173, 136, 0.46);
 }
 
 .secret-card {
@@ -29,18 +45,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 48rpx;
-  padding: 54rpx 40rpx;
+  margin-top: 38rpx;
+  padding: 52rpx 40rpx;
+  border-color: rgba(218, 184, 116, 0.34);
   overflow: hidden;
   position: relative;
   text-align: center;
   user-select: none;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(183, 139, 65, 0.09), transparent 38%),
+    linear-gradient(155deg, rgba(28, 35, 48, 0.98), rgba(17, 22, 31, 0.98));
 }
 
 .secret-card::before {
   width: 440rpx;
   height: 440rpx;
-  border: 2rpx solid rgba(215, 180, 106, 0.08);
+  border: 2rpx solid rgba(215, 180, 106, 0.11);
   border-radius: 50%;
   content: '';
   left: 50%;
@@ -49,9 +69,22 @@
   transform: translate(-50%, -50%);
 }
 
+.secret-card::after {
+  width: 180rpx;
+  height: 1rpx;
+  background: linear-gradient(90deg, transparent, rgba(218, 182, 109, 0.4), transparent);
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 28rpx;
+  transform: translateX(-50%);
+}
+
 .secret-card.is-revealed {
   justify-content: flex-start;
-  background: linear-gradient(155deg, #1e2834 0%, #141923 54%, #11151d 100%);
+  background:
+    radial-gradient(circle at 50% 4%, rgba(197, 158, 84, 0.1), transparent 24%),
+    linear-gradient(155deg, #202a37 0%, #151b25 54%, #10141c 100%);
 }
 
 .secret-card.camp-good {
@@ -70,9 +103,11 @@
   height: 180rpx;
   align-items: center;
   justify-content: center;
-  border: 2rpx solid rgba(215, 180, 106, 0.55);
+  border: 2rpx solid rgba(221, 187, 117, 0.62);
   border-radius: 50%;
-  color: #d9b66d;
+  background: radial-gradient(circle, rgba(200, 155, 74, 0.13), rgba(13, 18, 26, 0.18));
+  box-shadow: 0 0 0 12rpx rgba(211, 170, 88, 0.035), inset 0 0 34rpx rgba(219, 179, 98, 0.045);
+  color: #e0bd75;
   font-size: 90rpx;
   position: relative;
   z-index: 1;
@@ -88,7 +123,7 @@
 .loading-title {
   margin-top: 44rpx;
   color: #f7ecd8;
-  font-size: 36rpx;
+  font-size: 35rpx;
   font-weight: 700;
   position: relative;
   z-index: 1;
@@ -116,11 +151,16 @@
   width: 45%;
   height: 100%;
   border-radius: 999rpx;
-  background: #c8a45e;
+  background: linear-gradient(90deg, #8b692f, #dbb66d);
+  box-shadow: 0 0 12rpx rgba(208, 168, 89, 0.3);
 }
 
 .camp-label {
-  color: #aeb8c5;
+  padding: 8rpx 18rpx;
+  border: 1rpx solid rgba(115, 174, 209, 0.24);
+  border-radius: 999rpx;
+  background: rgba(63, 116, 151, 0.1);
+  color: #aebfd0;
   font-size: 22rpx;
   font-weight: 800;
   letter-spacing: 7rpx;
@@ -129,6 +169,8 @@
 }
 
 .camp-evil .camp-label {
+  border-color: rgba(205, 91, 84, 0.24);
+  background: rgba(137, 47, 48, 0.12);
   color: #e6948f;
 }
 
@@ -136,7 +178,7 @@
   margin-top: 24rpx;
   color: #fff8e9;
   font-family: Georgia, "Songti SC", serif;
-  font-size: 76rpx;
+  font-size: 74rpx;
   font-weight: 700;
   letter-spacing: 6rpx;
   position: relative;
@@ -157,9 +199,9 @@
   width: 100%;
   margin-top: 30rpx;
   padding: 4rpx 26rpx;
-  border: 1rpx solid rgba(125, 142, 163, 0.2);
+  border: 1rpx solid rgba(125, 142, 163, 0.23);
   border-radius: 20rpx;
-  background: rgba(7, 10, 15, 0.28);
+  background: linear-gradient(145deg, rgba(11, 15, 22, 0.48), rgba(18, 24, 33, 0.34));
   position: relative;
   text-align: left;
   z-index: 1;
@@ -180,7 +222,7 @@
 }
 
 .guide-label {
-  color: #d8b872;
+  color: #dfbf79;
   font-size: 21rpx;
   font-weight: 700;
 }
@@ -198,11 +240,11 @@
 
 .knowledge-panel {
   width: 100%;
-  margin-top: 48rpx;
+  margin-top: 30rpx;
   padding: 28rpx;
   border: 1rpx solid rgba(215, 180, 106, 0.18);
   border-radius: 22rpx;
-  background: rgba(7, 10, 15, 0.38);
+  background: rgba(7, 10, 15, 0.5);
   position: relative;
   text-align: left;
   z-index: 1;
@@ -235,7 +277,8 @@
   gap: 10rpx;
   padding: 12rpx 18rpx;
   border-radius: 999rpx;
-  background: #252d3a;
+  border: 1rpx solid rgba(97, 112, 132, 0.26);
+  background: linear-gradient(180deg, #28313f, #202735);
   color: #eef0f2;
   font-size: 24rpx;
 }
@@ -247,12 +290,16 @@
 
 .identity-actions {
   margin-top: auto;
-  padding-top: 34rpx;
+  padding-top: 30rpx;
+}
+
+.confirm-button {
+  width: 100%;
 }
 
 .privacy-copy {
   margin: 24rpx 28rpx 0;
-  color: #68717e;
+  color: #737c88;
   font-size: 21rpx;
   line-height: 1.55;
   text-align: center;
@@ -260,4 +307,64 @@
 
 .retry-button {
   margin-top: 24rpx;
+}
+
+@media (max-width: 350px) {
+  .identity-page {
+    padding-top: 30rpx;
+  }
+
+  .identity-title {
+    font-size: 41rpx;
+  }
+
+  .secret-card {
+    min-height: 680rpx;
+    margin-top: 30rpx;
+    padding: 42rpx 28rpx;
+  }
+
+  .seal {
+    width: 154rpx;
+    height: 154rpx;
+    font-size: 76rpx;
+  }
+
+  .small-seal {
+    width: 104rpx;
+    height: 104rpx;
+    font-size: 50rpx;
+  }
+
+  .role-name {
+    font-size: 64rpx;
+  }
+
+  .role-guide {
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+  }
+
+  .knowledge-panel {
+    padding: 22rpx;
+  }
+}
+
+@media (max-height: 700px) {
+  .identity-page {
+    padding-top: 24rpx;
+  }
+
+  .identity-warning {
+    margin-top: 12rpx;
+  }
+
+  .secret-card {
+    min-height: 620rpx;
+    margin-top: 24rpx;
+  }
+
+  .identity-actions {
+    padding-top: 24rpx;
+  }
 }

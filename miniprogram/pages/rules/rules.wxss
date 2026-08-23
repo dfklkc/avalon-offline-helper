@@ -1,14 +1,15 @@
 .rules-page {
-  padding-top: 54rpx;
+  padding-top: 46rpx;
 }
 
 .rules-title {
-  font-size: 48rpx;
+  font-size: 50rpx;
 }
 
 .rules-lead {
   margin-top: 22rpx;
-  color: #aab0ba;
+  max-width: 650rpx;
+  color: #a5adb8;
   font-size: 27rpx;
   line-height: 1.7;
 }
@@ -16,36 +17,59 @@
 .camp-grid {
   display: flex;
   gap: 18rpx;
-  margin-top: 36rpx;
+  margin-top: 32rpx;
 }
 
 .camp-card {
   flex: 1;
   min-height: 226rpx;
-  padding: 26rpx 24rpx;
+  padding: 24rpx;
   border: 1rpx solid;
   border-radius: 24rpx;
+  box-shadow: inset 0 1rpx 0 rgba(255, 255, 255, 0.035), 0 14rpx 34rpx rgba(0, 0, 0, 0.15);
 }
 
 .good-card {
   border-color: rgba(97, 156, 199, 0.45);
-  background: rgba(46, 96, 132, 0.22);
+  background: linear-gradient(145deg, rgba(48, 105, 143, 0.28), rgba(24, 35, 48, 0.54));
 }
 
 .evil-card {
   border-color: rgba(190, 74, 70, 0.45);
-  background: rgba(116, 38, 40, 0.22);
+  background: linear-gradient(145deg, rgba(127, 40, 43, 0.28), rgba(45, 26, 34, 0.5));
+}
+
+.camp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.camp-icon {
+  display: flex;
+  width: 42rpx;
+  height: 42rpx;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid currentColor;
+  border-radius: 50%;
+  color: #83bddc;
+  font-size: 25rpx;
+}
+
+.evil-card .camp-icon {
+  color: #de817b;
 }
 
 .camp-kicker {
-  color: #9caabd;
+  color: #abb6c4;
   font-size: 21rpx;
   font-weight: 700;
   letter-spacing: 3rpx;
 }
 
 .camp-goal {
-  margin-top: 18rpx;
+  margin-top: 20rpx;
   color: #fff4df;
   font-size: 31rpx;
   font-weight: 700;
@@ -59,8 +83,28 @@
 }
 
 .team-table {
-  margin-top: 26rpx;
-  padding: 20rpx 24rpx;
+  margin-top: 24rpx;
+  padding: 22rpx 24rpx;
+}
+
+.table-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 18rpx;
+  border-bottom: 1rpx solid rgba(67, 78, 94, 0.64);
+}
+
+.table-title {
+  color: #eee3d1;
+  font-size: 27rpx;
+  font-weight: 700;
+}
+
+.table-caption {
+  color: #737d8a;
+  font-size: 19rpx;
+  letter-spacing: 2rpx;
 }
 
 .team-table-head,
@@ -73,12 +117,13 @@
 .team-table-head,
 .team-table-row {
   min-height: 62rpx;
-  border-bottom: 1rpx solid #303744;
+  border-bottom: 1rpx solid rgba(62, 72, 87, 0.62);
 }
 
 .team-table-head {
   color: #737c89;
-  font-size: 19rpx;
+  font-size: 18rpx;
+  letter-spacing: 2rpx;
 }
 
 .team-table-row:last-of-type {
@@ -114,6 +159,7 @@
 }
 
 .round-sizes .double-fail {
+  border: 1rpx solid rgba(197, 81, 76, 0.18);
   border-radius: 10rpx;
   background: rgba(174, 74, 69, 0.2);
   color: #e19a93;
@@ -125,7 +171,10 @@
 }
 
 .table-note {
-  margin-top: 16rpx;
+  margin-top: 14rpx;
+  padding: 12rpx 14rpx;
+  border-radius: 12rpx;
+  background: rgba(102, 42, 44, 0.14);
   color: #7f8895;
   font-size: 20rpx;
   line-height: 1.5;
@@ -133,14 +182,31 @@
 
 .rule-list {
   margin-top: 28rpx;
-  padding: 8rpx 28rpx;
+  padding: 0 28rpx 8rpx;
+}
+
+.rule-list-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 24rpx 0 20rpx;
+  border-bottom: 1rpx solid rgba(65, 75, 90, 0.7);
+  color: #eee3d1;
+  font-size: 27rpx;
+  font-weight: 700;
+}
+
+.rule-list-header text:last-child {
+  color: #746d61;
+  font-size: 17rpx;
+  letter-spacing: 3rpx;
 }
 
 .rule-item {
   display: flex;
   gap: 22rpx;
   padding: 30rpx 0;
-  border-bottom: 1rpx solid #303744;
+  border-bottom: 1rpx solid rgba(62, 72, 87, 0.62);
 }
 
 .rule-item:last-child {
@@ -156,6 +222,7 @@
   justify-content: center;
   border: 1rpx solid rgba(215, 180, 106, 0.5);
   border-radius: 50%;
+  background: rgba(162, 125, 58, 0.08);
   color: #d8b56b;
   font-family: Georgia, serif;
   font-size: 27rpx;
@@ -179,10 +246,68 @@
 }
 
 .rules-footnote {
-  margin: 28rpx 16rpx 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16rpx;
+  margin: 26rpx 4rpx 0;
   padding: 22rpx 24rpx;
+  border: 1rpx solid rgba(168, 137, 77, 0.18);
   border-left: 4rpx solid #a8894d;
-  color: #838b98;
+  border-radius: 0 16rpx 16rpx 0;
+  background: rgba(24, 29, 39, 0.46);
+  color: #8c95a1;
   font-size: 22rpx;
   line-height: 1.6;
+}
+
+.footnote-icon {
+  flex: 0 0 auto;
+  color: #b09155;
+  font-size: 28rpx;
+}
+
+@media (max-width: 350px) {
+  .rules-page {
+    padding-top: 34rpx;
+  }
+
+  .rules-title {
+    font-size: 44rpx;
+  }
+
+  .rules-lead {
+    font-size: 24rpx;
+  }
+
+  .camp-grid {
+    flex-direction: column;
+  }
+
+  .camp-card {
+    min-height: 0;
+  }
+
+  .camp-goal {
+    font-size: 28rpx;
+  }
+
+  .team-table,
+  .rule-list {
+    padding-right: 20rpx;
+    padding-left: 20rpx;
+  }
+
+  .player-count,
+  .team-table-head > view:first-child {
+    width: 112rpx;
+    flex-basis: 112rpx;
+  }
+
+  .rule-item {
+    gap: 16rpx;
+  }
+
+  .rule-detail {
+    font-size: 22rpx;
+  }
 }

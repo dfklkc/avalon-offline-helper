@@ -1,6 +1,6 @@
 <view class="page-shell room-page">
   <view class="room-topbar">
-    <view class="room-code-block" bindtap="copyRoomCode">
+    <view class="room-code-block" hover-class="room-code-hover" bindtap="copyRoomCode">
       <text class="room-code-label">房间码</text>
       <text class="room-code">{{roomCode}}</text>
       <text class="copy-label">复制</text>
@@ -29,6 +29,7 @@
 
   <block wx:if="{{room && me}}">
     <view class="phase-card card">
+      <view class="phase-ornament">◇</view>
       <view class="phase-copy">
         <text class="phase-kicker">{{isLobby ? '大厅' : (isFinished ? '结算' : '第 ' + questNumber + ' 轮')}}</text>
         <view class="phase-title">{{phaseLabel}}</view>
@@ -61,6 +62,7 @@
           wx:for="{{players}}"
           wx:key="id"
           class="player-row {{item.selected ? 'is-selected' : ''}} {{item.onCurrentTeam ? 'is-on-team' : ''}}"
+          hover-class="player-row-hover"
           data-id="{{item.id}}"
           bindtap="openPlayerNote"
         >
@@ -98,6 +100,7 @@
     </view>
 
     <view wx:if="{{isLobby}}" class="action-card card">
+      <view class="action-eyebrow">LOBBY SETUP</view>
       <view class="action-title">开局准备</view>
       <view class="lobby-meta">
         <text>{{room.mode === 'beginner' ? '入门模式' : '经典模式'}}</text>
